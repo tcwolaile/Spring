@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="Employee_1" class="XML.Employee">
+        <property name="name" value="张三"/>
+        <property name="worNumber" value="123456"/>
+    </bean>
+    <bean id="Employee_2" class="XML.Employee">
+        <property name="name" value="李四"/>
+        <property name="worNumber" value="123456"/>
+    </bean>
+    <bean id="Crop" class="XML.Crop">
+        <property name="corpName" value="李四"/>
+        <property name="staff">
+            <list>
+                <ref bean="Employee_2"/>
+                <ref bean="Employee_1"/>
+            </list>
+        </property>
+    </bean>
+</beans>
